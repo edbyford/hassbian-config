@@ -3,3 +3,4 @@
 !.gitignore
 secrets.yaml
 /hadaemon/appdaemon.yaml
+!*.py
