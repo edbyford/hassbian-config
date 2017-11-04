@@ -28,9 +28,9 @@ barlet_status_dropdown:
       - Away
       - Extended Away
 
-222SW_status_dropdown:
-  name: Everyone
-  options:
-    - Home
-    - Away
-    - Extended Away
+everyone_status_dropdown:
+    name: Everyone
+    options:
+      - Home
+      - Away
+      - Extended Away

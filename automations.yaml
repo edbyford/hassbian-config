@@ -138,6 +138,10 @@
             input_select.barlet_status_dropdown
           {% endif %}
         option: Home
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.everyone_status_dropdown
+        option: Home
     - service: notify.simplepush
       data_template:
         message: "{{ trigger.entity_id }} marked as home!"
@@ -253,9 +257,24 @@
         minutes: 10
   action:
     - service: notify.simplepush
-      data_template:
-        message: "Everyone is away, turning lights off"
+      data:
+        message: "Everyone is away"
     - service: input_select.select_option
-      entity_id: input_select.222SW_status_dropdown
-      option: Away
+      data:
+        entity_id: input_select.everyone_status_dropdown
+        option: Away
     - service: light.turn_off
+
+- id: MarkEveryoneExtendedAway
+  alias: Mark Everyone Extended Away
+  trigger:
+    - platform: state
+      entity_id: input_select.everyone_status_dropdown
+      to: 'Away'
+      for:
+        hours: 24
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.everyone_status_dropdown
+        option: Extended Away
