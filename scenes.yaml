@@ -1,0 +1,161 @@
+  - name: LR Reading
+    entities:
+        group.living_room_lights:
+            state: on
+            transition: 2
+            brightness: 240
+            # xy_color: [ 0.4447, 0.4065 ]
+        group.tradfri_LR:
+            state: on
+            brightness: 240
+        script.fluxer_update_all_loop:
+            state: on
+        input_boolean.media_playing:
+            state: off
+
+        
+  - name: TV
+    entities:
+
+        script.regular_flux_update:
+            state: off
+
+        input_boolean.media_playing:
+            state: on
+
+        light.left_of_screen:
+            state: off
+            transition: 0
+        light.right_of_screen:
+            state: off
+            transition: 0
+        light.left_of_sofa:
+            state: on
+            transition: 2
+            brightness: 75
+            # xy_color: [ 0.5529, 0.4107 ]
+        light.right_of_sofa:
+            state: on
+            transition: 2
+            brightness: 75
+            # rgb_color: [77,81,255]
+        light.hall:
+            state: on
+            transition: 5
+            brightness: 240
+            # rgb_color: [77,81,255]
+
+        light.tradfri_bulb_gu10_ws_400lm_3:
+            state: off
+
+
+        light.tradfri_bulb_gu10_ws_400lm_4:
+            state: off
+
+        light.tradfri_bulb_gu10_ws_400lm_1:
+            state: on
+            brightness: 50
+
+        light.tradfri_bulb_gu10_ws_400lm_2:
+            state: on
+            brightness: 50
+
+        # script.fluxer_update:
+        #     state: on
+
+  - name: Action
+    entities:
+
+        script.regular_flux_update:
+            state: off
+        input_boolean.media_playing:
+            state: on
+
+        light.left_of_screen:
+            state: off
+            transition: 2
+        light.right_of_screen:
+            state: off
+            transition: 2
+
+        light.left_of_sofa:
+            state: on
+            transition: 3
+            brightness: 100
+            rgb_color: [254,100,0]
+        light.right_of_sofa:
+            state: on
+            transition: 3
+            brightness: 100
+            rgb_color: [254,100,0]
+
+        
+        light.hall:
+            state: on
+            transition: 45
+            brightness: 115
+            rgb_color: [154,178,254]
+
+  - name: RomCom
+    entities:
+
+        script.regular_flux_update:
+            state: off
+        input_boolean.media_playing:
+            state: on
+
+        light.left_of_screen:
+            state: off
+            transition: 2
+        light.right_of_screen:
+            state: off
+            transition: 2
+
+        light.left_of_sofa:
+            state: on
+            transition: 3
+            brightness: 150
+            rgb_color: [255,150,75]
+        light.right_of_sofa:
+            state: on
+            transition: 3
+            brightness: 150
+            rgb_color: [255,150,75]
+        light.hall:
+            state: on
+            transition: 5
+            brightness: 240
+            rgb_color: [254,150,0]
+
+
+  - name: SciFi
+    entities:
+
+        script.regular_flux_update:
+            state: off
+        input_boolean.media_playing:
+            state: on
+
+        light.left_of_screen:
+            state: off
+            transition: 2
+        light.right_of_screen:
+            state: off
+            transition: 2
+
+        light.left_of_sofa:
+            state: on
+            transition: 3
+            brightness: 50
+            rgb_color: [3,29,255]
+        light.right_of_sofa:
+            state: on
+            transition: 3
+            brightness: 50
+            rgb_color: [3,29,255]
+        light.hall:
+            state: on
+            transition: 4
+            brightness: 240
+            rgb_color: [251,63,242]
+

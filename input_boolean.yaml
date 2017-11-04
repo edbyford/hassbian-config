@@ -1,0 +1,23 @@
+trigger_first_morning:
+  name: First morning motion
+  initial: off
+  icon: mdi:kettle
+
+motion_30mins:
+  name: Motion Detected Within 30mins
+  initial: off
+  icon: mdi:run
+
+motion_10mins:
+  name: Motion Detected Within 10mins
+  initial: off
+  icon: mdi:run-fast
+
+media_playing:
+  name: Media Playing
+  initial: off
+  icon: mdi:speaker-wireless
+
+guest_mode:
+  name: Guest Mode
+  icon: mdi:human-greeting

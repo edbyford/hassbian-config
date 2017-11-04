@@ -1,0 +1,13 @@
+- RWE:
+  name: E+H Work
+  latitude: !secret lat_loc_RWE
+  longitude: !secret lon_loc_RWE
+  radius: 250
+  icon: mdi:rocket
+
+- WTW:
+  name: Barlet Work
+  latitude: !secret lat_loc_WTW
+  longitude: !secret lon_loc_WTW
+  radius: 250
+  icon: mdi:domain

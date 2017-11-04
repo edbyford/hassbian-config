@@ -1,0 +1,30 @@
+
+ed_status_dropdown:
+    name: Ed
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+
+hadden_status_dropdown:
+    name: Hadden
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home
+
+barlet_status_dropdown:
+    name: Barlet
+    options:
+      - Home
+      - Just Arrived
+      - Just Left
+      - Away
+      - Extended Away
+    initial: Home

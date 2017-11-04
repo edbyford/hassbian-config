@@ -1,0 +1,246 @@
+- id: fairyLightsOnAtDusk
+  alias: Fairy Lights on at dusk
+
+  trigger:
+  - platform: sun
+    event: sunset
+
+  action:
+  - service: homeassistant.turn_on
+    entity_id: switch.switch_hall
+
+- id: fairyLightsOffAtDawn
+  alias: Fairy Lights off at dawn
+
+  trigger:
+  - platform: sun
+    event: sunrise
+
+  action:
+  - service: homeassistant.turn_off
+    entity_id: switch.switch_hall
+
+
+- id: MediaPlaying
+  alias: "Media player playing"
+  trigger:
+    - platform: state
+      entity_id: device_tracker.onkyo
+      from: 'not_home'
+      to: 'home'
+  action:
+      service: light.turn_off
+      entity_id: light.left_of_screen, light.right_of_screen
+
+- id: MediaStopped
+  alias: "Media player stopped"
+  trigger:
+    - platform: state
+      entity_id: device_tracker.onkyo
+      from: 'home'
+      to: 'not_home'
+  condition:
+    condition: sun
+    after: sunset
+  action:
+      service: light.turn_on
+      entity_id: light.left_of_screen, light.right_of_screen
+
+
+- id: onBoot
+  alias: On Boot
+
+  trigger:
+  - platform: homeassistant
+    event: start
+
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.fluxer
+
+    - service: notify.simplepush
+      data:
+        message: "Reboot completed"
+
+# Presence Detection
+
+- id: MarkJustArrived
+  alias: Mark person as just arrived
+  trigger:
+    - platform: state
+      entity_id: device_tracker.oneplus_3t
+      from: 'not_home'
+      to: 'home'
+    - platform: state
+      entity_id: group.hadden_presence
+      from: 'not_home'
+      to: 'home'
+    - platform: state
+      entity_id: group.barlet_presence
+      from: 'not_home'
+      to: 'home'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: >
+          {% if trigger.entity_id == 'device_tracker.oneplus_3t' %}
+            input_select.ed_status_dropdown
+          {% elif trigger.entity_id == 'group.hadden_presence' %}
+            input_select.hadden_status_dropdown
+          {% else %}
+            input_select.barlet_status_dropdown
+          {% endif %}
+        option: Just Arrived
+    - service: notify.simplepush
+      data_template:
+        message: "{{ trigger.entity_id }} just arrived home!"
+
+
+- id: MarkAsHome
+  alias: Mark person as home
+  trigger:
+    - platform: state
+      entity_id: input_select.ed_status_dropdown
+      to: 'Just Arrived'
+      for:
+        minutes: 10
+    - platform: state
+      entity_id: input_select.hadden_status_dropdown
+      to: 'Just Arrived'
+      for:
+        minutes: 10
+    - platform: state
+      entity_id: input_select.barlet_status_dropdown
+      to: 'Just Arrived'
+      for:
+        minutes: 10
+    - platform: state
+      entity_id: input_select.ed_status_dropdown
+      from: 'Just Left'
+      to: 'Just Arrived'
+    - platform: state
+      entity_id: input_select.hadden_status_dropdown
+      from: 'Just Left'
+      to: 'Just Arrived'
+    - platform: state
+      entity_id: input_select.barlet_status_dropdown
+      from: 'Just Left'
+      to: 'Just Arrived'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: >
+          {% if trigger.entity_id == 'input_select.ed_status_dropdown' %}
+            input_select.ed_status_dropdown
+          {% elif trigger.entity_id == 'input_select.hadden_status_dropdown' %}
+            input_select.hadden_status_dropdown
+          {% else %}
+            input_select.barlet_status_dropdown
+          {% endif %}
+        option: Home
+    - service: notify.simplepush
+      data_template:
+        message: "{{ trigger.entity_id }} marked as home!"
+
+- id: MarkAsJustLeft
+  alias: Mark person as Just Left
+  trigger:
+    - platform: state
+      entity_id: device_tracker.oneplus_3t
+      from: 'home'
+      to: 'not_home'
+    - platform: state
+      entity_id: group.hadden_presence
+      from: 'home'
+      to: 'not_home'
+    - platform: state
+      entity_id: group.barlet_presence
+      from: 'home'
+      to: 'not_home'
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: >
+          {% if trigger.entity_id == 'device_tracker.oneplus_3t' %}
+            input_select.ed_status_dropdown
+          {% elif trigger.entity_id == 'group.hadden_presence' %}
+            input_select.hadden_status_dropdown
+          {% else %}
+            input_select.barlet_status_dropdown
+          {% endif %}
+        option: Just Left
+    - service: notify.simplepush
+      data_template:
+        message: "{{ trigger.entity_id }} marked as just left!"
+
+
+- id: MarkAsAway
+  alias: Mark person as away
+  trigger:
+    - platform: state
+      entity_id: input_select.ed_status_dropdown
+      to: 'Just Left'
+      for:
+        minutes: 10
+    - platform: state
+      entity_id: input_select.hadden_status_dropdown
+      to: 'Just Left'
+      for:
+        minutes: 10
+    - platform: state
+      entity_id: input_select.barlet_status_dropdown
+      to: 'Just Left'
+      for:
+        minutes: 10
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: >
+          {% if trigger.entity_id == 'input_select.ed_status_dropdown' %}
+            input_select.ed_status_dropdown
+          {% elif trigger.entity_id == 'input_select.hadden_status_dropdown' %}
+            input_select.hadden_status_dropdown
+          {% else %}
+            input_select.barlet_status_dropdown
+          {% endif %}
+        option: Away
+    - service: notify.simplepush
+      data_template:
+        message: "{{ trigger.entity_id }} marked as away!"
+
+
+- id: MarkAsExtendedAway
+  alias: Mark person as extended away
+  trigger:
+    - platform: state
+      entity_id: input_select.ed_status_dropdown
+      to: 'Away'
+      for:
+        hours: 24
+    - platform: state
+      entity_id: input_select.hadden_status_dropdown
+      to: 'Away'
+      for:
+        hours: 24
+    - platform: state
+      entity_id: input_select.barlet_status_dropdown
+      to: 'Away'
+      for:
+        hours: 24
+  action:
+    - service: input_select.select_option
+      data_template:
+        entity_id: >
+          {% if trigger.entity_id == 'input_select.ed_status_dropdown' %}
+            input_select.ed_status_dropdown
+          {% elif trigger.entity_id == 'input_select.hadden_status_dropdown' %}
+            input_select.hadden_status_dropdown
+          {% else %}
+            input_select.barlet_status_dropdown
+          {% endif %}
+        option: Extended Away
+    - service: notify.simplepush
+      data_template:
+        message: "{{ trigger.entity_id }} marked as extended away!"
+
+

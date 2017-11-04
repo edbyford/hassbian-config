@@ -1,0 +1,56 @@
+#### sensors
+# - platform: yr
+#   monitored_conditions:
+#       - temperature
+#       - symbol
+#       - precipitation
+#       - cloudiness
+
+
+- platform: template
+  sensors:
+    ed_status:
+      value_template: '{{ states.input_select.ed_status_dropdown.state }}'
+      friendly_name: 'Ed'
+      entity_id: input_select.ed_status_dropdown
+    hadden_status:
+      value_template: '{{ states.input_select.hadden_status_dropdown.state }}'
+      friendly_name: 'Hadden'
+      entity_id: input_select.hadden_status_dropdown
+    barlet_status:
+      value_template: '{{ states.input_select.barlet_status_dropdown.state }}'
+      friendly_name: 'Barlet'
+      entity_id: input_select.barlet_status_dropdown
+
+- platform: darksky
+  api_key: !secret dark_sky_api_key
+  monitored_conditions:
+    - summary
+    - icon
+    - nearest_storm_distance
+    - nearest_storm_bearing
+    - precip_type
+    - precip_intensity
+    - precip_probability
+    - temperature
+    - apparent_temperature
+    - dew_point
+    - wind_speed
+    - wind_bearing
+    - cloud_cover
+    - humidity
+    - pressure
+    - visibility
+    - ozone
+    - minutely_summary
+    - hourly_summary
+    - daily_summary
+    - temperature_max
+    - temperature_min
+    - apparent_temperature_max
+    - apparent_temperature_min
+    - precip_intensity_max
+
+- platform: time_date
+  display_options:
+    - 'time'

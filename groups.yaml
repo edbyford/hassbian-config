@@ -1,0 +1,92 @@
+home_modes:
+  name: Home Mode
+  control: hidden
+  entities:
+    - input_boolean.eh_sleeping
+    - input_boolean.trigger_first_morning
+    - input_boolean.night
+    - input_boolean.guest_mode
+
+Master_BR_Lights:
+  name: Master BR Lights
+  entities:
+    - light.hadden_bedside
+    - light.ed_bedside
+
+Sofa Lights:
+  name: Sofa
+  entities:
+    - light.left_of_sofa
+    - light.right_of_sofa
+
+Screen Lights:
+  name: Screen Lights
+  entities:
+    - light.left_of_screen
+    - light.right_of_screen
+
+Living Room Lights:
+  name: Living Room Lights
+  entities:
+    - light.left_of_sofa
+    - light.right_of_sofa
+    - light.left_of_screen
+    - light.right_of_screen
+
+Tradfri LR:
+  name: Tradfri LR
+  entities:
+    - light.tradfri_bulb_gu10_ws_400lm
+    - light.tradfri_bulb_gu10_ws_400lm_2
+    - light.tradfri_bulb_gu10_ws_400lm_3
+    - light.tradfri_bulb_gu10_ws_400lm_4
+
+Weather:
+  name: Weather
+  entities:
+    - sensor.dark_sky_apparent_temperature
+    - sensor.dark_sky_cloud_coverage
+    - sensor.dark_sky_daily_high_apparent_temperature
+    - sensor.dark_sky_daily_high_temperature
+    - sensor.dark_sky_daily_low_apparent_temperature
+    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_daily_max_precip_intensity
+    - sensor.dark_sky_daily_summary
+    - sensor.dark_sky_dew_point
+    - sensor.dark_sky_hourly_summary
+    - sensor.dark_sky_humidity
+    - sensor.dark_sky_icon
+    - sensor.dark_sky_minutely_summary
+    - sensor.dark_sky_nearest_storm_bearing
+    - sensor.dark_sky_nearest_storm_distance
+    - sensor.dark_sky_ozone
+    - sensor.dark_sky_precip
+    - sensor.dark_sky_precip_intensity
+    - sensor.dark_sky_precip_probability
+    - sensor.dark_sky_pressure
+    - sensor.dark_sky_summary
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_visibility
+    - sensor.dark_sky_wind_bearing
+    - sensor.dark_sky_wind_speed
+
+people_status:
+  name: People Status
+  entities:
+    - sensor.ed_status
+    - sensor.hadden_status
+    - sensor.barlet_status
+
+barlet_presence:
+  name: Barlet Presence
+  entities:
+    - device_tracker.bbconnect
+    - device_tracker.barlets_iphone
+
+hadden_presence:
+  name: Hadden Presence
+  entities:
+    - device_tracker.hadden_wifi
+    - device_tracker.iphone
+
+
