@@ -63,3 +63,12 @@ iphone:
   vendor: Apple, Inc.
 
 
+
+bcm20705b0_generic_usb_detuned_class_1__20_mhz:
+  hide_if_away: false
+  icon:
+  mac: BT_28:24:FF:A3:9C:25
+  name: BCM20705B0 Generic USB Detuned Class 1 @ 20 MHz
+  picture:
+  track: true
+  vendor: unknown

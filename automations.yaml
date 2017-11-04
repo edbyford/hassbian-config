@@ -93,7 +93,7 @@
         option: Just Arrived
     - service: notify.simplepush
       data_template:
-        message: "{{ trigger.entity_id }} just arrived home!"
+        message: "{{ trigger.entity_id }} just arrived!"
 
 
 - id: MarkAsHome
