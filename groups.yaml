@@ -76,6 +76,7 @@ people_status:
     - sensor.ed_status
     - sensor.hadden_status
     - sensor.barlet_status
+    - group.222SW_presence
 
 barlet_presence:
   name: Barlet Presence
@@ -94,5 +95,12 @@ ed_presence:
   entities:
     - device_tracker.ed_wifi
     - device_tracker.oneplus_3t_bt
+
+222SW_presence:
+  name: 222SW
+  entities:
+    - group.ed_presence
+    - group.hadden_presence
+    - group.barlet_presence
 
 

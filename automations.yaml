@@ -68,7 +68,7 @@
   alias: Mark person as just arrived
   trigger:
     - platform: state
-      entity_id: device_tracker.oneplus_3t
+      entity_id: group.ed_presence
       from: 'not_home'
       to: 'home'
     - platform: state
@@ -83,7 +83,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: >
-          {% if trigger.entity_id == 'device_tracker.oneplus_3t' %}
+          {% if trigger.entity_id == 'group.ed_presence' %}
             input_select.ed_status_dropdown
           {% elif trigger.entity_id == 'group.hadden_presence' %}
             input_select.hadden_status_dropdown
@@ -146,7 +146,7 @@
   alias: Mark person as Just Left
   trigger:
     - platform: state
-      entity_id: device_tracker.oneplus_3t
+      entity_id: group.ed_presence
       from: 'home'
       to: 'not_home'
     - platform: state
@@ -161,7 +161,7 @@
     - service: input_select.select_option
       data_template:
         entity_id: >
-          {% if trigger.entity_id == 'device_tracker.oneplus_3t' %}
+          {% if trigger.entity_id == 'group.ed_presence' %}
             input_select.ed_status_dropdown
           {% elif trigger.entity_id == 'group.hadden_presence' %}
             input_select.hadden_status_dropdown
@@ -243,4 +243,19 @@
       data_template:
         message: "{{ trigger.entity_id }} marked as extended away!"
 
-
+- id: MarkEveryoneAway
+  alias: Mark Everyone Away
+  trigger:
+    - platform: state
+      entity_id: group.222SW_presence
+      to: 'not_home'
+      for:
+        minutes: 10
+  action:
+    - service: notify.simplepush
+      data_template:
+        message: "Everyone is away, turning lights off"
+    - service: input_select.select_option
+      entity_id: input_select.222SW_status_dropdown
+      option: Away
+    - service: light.turn_off

@@ -1,0 +1,65 @@
+onkyo:
+  name: AV Receiver
+  mac: 00:09:B0:D1:22:AD
+  picture: https://lh4.ggpht.com/TSjseUGsrFmHLjakqMmYctLYyfVyg7mY7jJyjJPWYE_26bkTiKbHk0MGb-CAPFwXgcg=w256
+  track: yes
+  hide_if_away: yes
+  consider_home: 30
+  
+oneplus_3t_bt:
+  hide_if_away: false
+  icon:
+  mac: BT_C0:EE:FB:EE:10:F5
+  name: Ed BT
+  picture:
+  track: true
+  vendor: OnePlus Tech (Shenzhen) Ltd
+
+ed_wifi:
+  name: Ed Wifi
+  mac: C0:EE:FB:EE:10:F6
+  track: yes
+
+hadden_wifi:
+  name: Hadden WiFi
+  mac: 44:00:10:C2:A8:29
+  track: yes
+
+bbconnect:
+  hide_if_away: false
+  icon:
+  mac: 58:7F:57:62:0A:6D
+  name: Barlet WiFi
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+barlets_iphone:
+  hide_if_away: false
+  icon:
+  mac: BT_58:7F:57:62:0A:6E
+  name: Barlet BT
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+
+eds_macbook_pro:
+  hide_if_away: true
+  icon:
+  mac: BT_78:4F:43:96:20:18
+  name: "Ed\u2019s MacBook Pro"
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+iphone:
+  hide_if_away: false
+  icon:
+  mac: BT_44:00:10:C2:A8:2A
+  name: Hadden BT
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+

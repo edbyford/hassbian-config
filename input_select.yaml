@@ -7,7 +7,7 @@ ed_status_dropdown:
       - Just Left
       - Away
       - Extended Away
-    initial: Home
+ 
 
 hadden_status_dropdown:
     name: Hadden
@@ -17,7 +17,7 @@ hadden_status_dropdown:
       - Just Left
       - Away
       - Extended Away
-    initial: Home
+
 
 barlet_status_dropdown:
     name: Barlet
@@ -27,4 +27,10 @@ barlet_status_dropdown:
       - Just Left
       - Away
       - Extended Away
-    initial: Home
+
+222SW_status_dropdown:
+  name: Everyone
+  options:
+    - Home
+    - Away
+    - Extended Away

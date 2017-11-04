@@ -16,6 +16,4 @@ switch.fluxer:
 device_tracker.bcm20705b0_generic_usb_detuned_class_1__20_mhz:
   hidden: true
 
-# sensor.ed_status:
-#   entity_picture: #URL to picture
 
