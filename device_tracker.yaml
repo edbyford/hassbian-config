@@ -3,6 +3,7 @@
       - 192.168.1.14
       - 192.168.1.25
       - 192.168.1.26
+      - 192.168.1.2
     consider_home: 180
 
   - platform: bluetooth_tracker

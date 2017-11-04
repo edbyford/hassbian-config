@@ -89,4 +89,10 @@ hadden_presence:
     - device_tracker.hadden_wifi
     - device_tracker.iphone
 
+ed_presence:
+  name: Ed Presence
+  entities:
+    - device_tracker.ed_wifi
+    - device_tracker.oneplus_3t_bt
+
 
