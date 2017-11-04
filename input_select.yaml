@@ -34,3 +34,4 @@ everyone_status_dropdown:
       - Home
       - Away
       - Extended Away
+    initial: Home
