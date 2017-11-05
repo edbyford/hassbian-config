@@ -1,6 +1,11 @@
-*
+*.log
+*.db
+*.conf
+.*
 !*.yaml
 !.gitignore
+*.pyc
+!hadaemon/apps/*
+!hadaemon/appdaemon.yaml
 secrets.yaml
-/hadaemon/appdaemon.yaml
-!*.py
+
