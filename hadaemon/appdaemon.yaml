@@ -60,11 +60,11 @@ colour_barlet:
 
 # end bootstrap light colours
 
-motion_light_hall:
-  module: motionlights
-  class: MotionLights
-  sensor: binary_sensor.motion_hall
-  entity_on: light.hall
-  entity_off: light.hall
-  delay: 600
+# motion_light_hall:
+#   module: motionlights
+#   class: MotionLights
+#   sensor: binary_sensor.motion_hall
+#   entity_on: light.hall
+#   entity_off: light.hall
+#   delay: 600
 
