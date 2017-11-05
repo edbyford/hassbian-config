@@ -23,3 +23,16 @@
   # stop_colortemp: 1900
   brightness: 240
   mode: xy
+
+  platform: template
+  switches:
+    tv:
+      value_template: "{% if is_state('remote.harmony_hub', 'on') %}on{% else %}off{% endif %}"
+      turn_on:
+        service: remote.turn_on
+        entity_id: remote.harmony_hub
+        data:
+          activity: 23274548          
+      turn_off:
+        service: remote.turn_off
+        entity_id: remote.harmony_hub
