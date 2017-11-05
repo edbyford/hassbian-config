@@ -251,14 +251,12 @@
   alias: Mark Everyone Away
   trigger:
     - platform: state
-      entity_id: group.222SW_presence
-      to: 'not_home'
-      for:
-        minutes: 10
+      entity_id: group.people_status
+      to: 'Away'
   action:
     - service: notify.simplepush
       data:
-        message: "Everyone is away"
+        message: "Everyone is away, turning off lights"
     - service: input_select.select_option
       data:
         entity_id: input_select.everyone_status_dropdown
@@ -278,3 +276,6 @@
       data:
         entity_id: input_select.everyone_status_dropdown
         option: Extended Away
+    - service: notify.simplepush
+      data:
+        message: "Flat is empty. Low power mode activated"

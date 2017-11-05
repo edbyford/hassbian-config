@@ -76,7 +76,7 @@ people_status:
     - sensor.ed_status
     - sensor.hadden_status
     - sensor.barlet_status
-    - group.222SW_presence
+    # - group.222SW_presence
 
 barlet_presence:
   name: Barlet Presence
