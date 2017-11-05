@@ -72,3 +72,12 @@ bcm20705b0_generic_usb_detuned_class_1__20_mhz:
   picture:
   track: true
   vendor: unknown
+
+g051:
+  hide_if_away: false
+  icon:
+  mac: BT_20:D7:5A:12:34:8D
+  name: G051
+  picture:
+  track: true
+  vendor: Posh Mobile Limited
