@@ -79,5 +79,14 @@ g051:
   mac: BT_20:D7:5A:12:34:8D
   name: G051
   picture:
-  track: true
+  track: false
   vendor: Posh Mobile Limited
+
+st1838:
+  hide_if_away: false
+  icon:
+  mac: BT_00:21:86:0B:00:03
+  name: ST1838
+  picture:
+  track: false
+  vendor: Universal Global Scientific Industrial Co., Ltd.
