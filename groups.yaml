@@ -94,7 +94,7 @@ ed_presence:
   name: Ed Presence
   entities:
     - device_tracker.ed_wifi
-    - device_tracker.oneplus_3t_bt
+    - device_tracker.ed_bt
 
 222SW_presence:
   name: 222SW
