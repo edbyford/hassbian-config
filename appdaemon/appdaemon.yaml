@@ -8,8 +8,8 @@ appdaemon:
   plugins:
     HASS:
       type: hass
-      ha_url: http://hassio/homeassistant
-      ha_key: d7a696741b4947d586d1ba5a8cce339a
+      ha_url: https://monsdare.duckdns.org:8123
+      ha_key: !secret api_password
 hadashboard:
   dash_url: http://192.168.1.118:5050
   dash_dir: /config/appdaemon/dashboards
