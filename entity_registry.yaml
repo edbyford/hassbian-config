@@ -70,3 +70,7 @@ media_player.eh_bedroom:
   name:
   platform: sonos
   unique_id: RINCON_000E58CC4EFA01400
+binary_sensor.motion_lr:
+  name:
+  platform: wemo
+  unique_id: 221244L11009CE

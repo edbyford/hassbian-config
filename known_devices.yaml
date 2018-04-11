@@ -211,3 +211,30 @@ mi_phone:
   picture:
   track: false
   vendor: Xiaomi Communications Co Ltd
+
+anker_soundcore:
+  hide_if_away: false
+  icon:
+  mac: BT_A4:77:58:03:22:A3
+  name: Anker SoundCore
+  picture:
+  track: false
+  vendor: Ningbo Freewings Technologies Co.,Ltd
+
+oneplus_5tconnect:
+  hide_if_away: false
+  icon:
+  mac: A0:99:9B:19:0A:C9
+  name: OnePlus 5T.connect
+  picture:
+  track: false
+  vendor: unknown
+
+smeuk1709:
+  hide_if_away: false
+  icon:
+  mac: BT_64:80:99:B9:35:83
+  name: SME-UK1709
+  picture:
+  track: false
+  vendor: Intel Corporate

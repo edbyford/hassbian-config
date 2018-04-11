@@ -1,3 +1,7 @@
+hello_world:
+  module: hello
+  class: HelloWorld
+
 # bootstrap light colours
 
 colour_hallwaylight:
