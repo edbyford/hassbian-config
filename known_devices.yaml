@@ -238,3 +238,30 @@ smeuk1709:
   picture:
   track: false
   vendor: Intel Corporate
+
+huawei_mate_10_pro:
+  hide_if_away: false
+  icon:
+  mac: BT_B0:E1:7E:0F:9A:5E
+  name: HUAWEI Mate 10 Pro
+  picture:
+  track: false
+  vendor: unknown
+
+plt_bbfit:
+  hide_if_away: false
+  icon:
+  mac: BT_E4:22:A5:9B:6E:7E
+  name: PLT BBFIT
+  picture:
+  track: false
+  vendor: PLANTRONICS, INC.
+
+huawei_mate_10_pro_2:
+  hide_if_away: false
+  icon:
+  mac: BT_74:D2:1D:0E:1C:2B
+  name: HUAWEI Mate 10 Pro
+  picture:
+  track: false
+  vendor: HUAWEI TECHNOLOGIES CO.,LTD
