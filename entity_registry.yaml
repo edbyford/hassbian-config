@@ -1,0 +1,76 @@
+light.left_of_screen:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:78:d0:f4-0b
+light.right_of_screen:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:79:6e:91-0b
+light.ed_bedside:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:78:b3:38-0b
+light.barlet:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:79:6f:37-0b
+light.right_of_sofa:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:7b:11:11-0b
+light.hall:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:7a:4d:1f-0b
+light.left_of_sofa:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:78:b3:ad-0b
+light.hadden_bedside:
+  name:
+  platform: hue
+  unique_id: 00:17:88:01:02:79:84:83-0b
+media_player.the_projector:
+  name:
+  platform: cast
+  unique_id: b529b556-5c66-6551-8681-074ff6b0bd2e
+media_player.bedroom_tv:
+  name:
+  platform: cast
+  unique_id: b1e298c2-1231-bace-2d35-1178b40485bf
+media_player.living_room_speaker:
+  name:
+  platform: cast
+  unique_id: e52240a0-35d3-6ff8-ee11-1e183ba33fb0
+switch.switch_hall:
+  name:
+  platform: wemo
+  unique_id: 221448K1100025
+media_player.living_room_speakers:
+  name:
+  platform: cast
+  unique_id: ae2c2a3e-82b1-4c46-93ca-646008d0fa67
+media_player.home_group:
+  name:
+  platform: cast
+  unique_id: c0b43573-8321-413b-8051-bfa466f89bda
+media_player.bedroom_speaker:
+  name:
+  platform: cast
+  unique_id: 413892c0-3dc5-9962-fb63-39c506f570f5
+media_player.living_room:
+  name:
+  platform: sonos
+  unique_id: RINCON_5CAAFD6C811001400
+media_player.big_speaker:
+  name:
+  platform: sonos
+  unique_id: RINCON_000E585ED21001400
+media_player.eh_bedroom:
+  name:
+  platform: sonos
+  unique_id: RINCON_000E58CC4EFA01400
+binary_sensor.motion_lr:
+  name:
+  platform: wemo
+  unique_id: 221244L11009CE

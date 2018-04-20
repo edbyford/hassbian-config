@@ -1,0 +1,70 @@
+AppDaemon:
+  cert_verify: False
+  disable_apps: 0
+  logfile: STDOUT
+  errorfile: STDERR
+  threads: 10
+  app_dir: /config/hadaemon/apps
+HASS:
+  ha_url: http://192.168.1.118:8123
+  ha_key: hagofox84!
+HADashboard:
+  dash_url: http://cp.local.io
+  dash_dir: /config/hadaemon/dashboards
+
+hello_world:
+  module: hello
+  class: HelloWorld
+
+# bootstrap light colours
+
+colour_hallwaylight:
+  module: lightcolour
+  class: LightColour
+  activelight: light.hall
+
+colour_ed_bedside:
+  module: lightcolour
+  class: LightColour
+  activelight: light.ed_bedside
+
+colour_hadden_bedside:
+  module: lightcolour
+  class: LightColour
+  activelight: light.hadden_bedside
+
+colour_left_of_screen:
+  module: lightcolour
+  class: LightColour
+  activelight: light.left_of_screen
+
+colour_right_of_screen:
+  module: lightcolour
+  class: LightColour
+  activelight: light.right_of_screen
+
+colour_left_of_sofa:
+  module: lightcolour
+  class: LightColour
+  activelight: light.left_of_sofa
+
+colour_right_of_sofa:
+  module: lightcolour
+  class: LightColour
+  activelight: light.right_of_sofa
+
+colour_barlet:
+  module: lightcolour
+  class: LightColour
+  activelight: light.barlet
+
+# end bootstrap light colours
+
+# motion_light_hall:
+#   module: motionlights
+#   class: MotionLights
+#   sensor: binary_sensor.motion_hall
+#   entity_on: light.hall
+#   entity_off: light.hall
+#   delay: 600
+

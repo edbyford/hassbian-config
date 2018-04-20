@@ -1,9 +1,19 @@
   - platform: nmap_tracker
     hosts:
+      # ONKYO
       - 192.168.1.14
-      - 192.168.1.25
+      # BARLET
       - 192.168.1.26
+      # HADDEN
+      - 192.168.1.11
+      # Me
       - 192.168.1.2
     consider_home: 180
+    new_device_defaults:
+      track_new_devices: False
+      hide_if_away: False
 
   - platform: bluetooth_tracker
+    new_device_defaults:
+      track_new_devices: False
+      hide_if_away: False

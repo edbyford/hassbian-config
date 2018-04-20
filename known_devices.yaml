@@ -6,10 +6,10 @@ onkyo:
   hide_if_away: yes
   consider_home: 30
   
-oneplus_3t_bt:
+ed_bt:
   hide_if_away: false
   icon:
-  mac: BT_C0:EE:FB:EE:10:F5
+  mac: BT_94:65:2D:D1:F4:FD
   name: Ed BT
   picture:
   track: true
@@ -17,7 +17,7 @@ oneplus_3t_bt:
 
 ed_wifi:
   name: Ed Wifi
-  mac: C0:EE:FB:EE:10:F6
+  mac: 94:65:2D:D1:F4:FE
   track: yes
 
 hadden_wifi:
@@ -61,14 +61,207 @@ iphone:
   picture:
   track: true
   vendor: Apple, Inc.
-
-
-
+  
 bcm20705b0_generic_usb_detuned_class_1__20_mhz:
   hide_if_away: false
   icon:
   mac: BT_28:24:FF:A3:9C:25
   name: BCM20705B0 Generic USB Detuned Class 1 @ 20 MHz
   picture:
-  track: true
+  track: false
+  vendor: Wistron Neweb Corporation
+
+
+
+desktopugonr9r:
+  hide_if_away: false
+  icon:
+  mac: BT_BC:83:85:EA:1B:E8
+  name: DESKTOP-UGONR9R
+  picture:
+  track: false
+  vendor: Microsoft Corporation
+
+samsung_galaxy_s7_edge:
+  hide_if_away: false
+  icon:
+  mac: BT_34:2D:0D:49:C4:AD
+  name: Samsung Galaxy S7 edge
+  picture:
+  track: false
+  vendor: Samsung Electronics Co.,Ltd
+
+soundcore_2:
+  hide_if_away: false
+  icon:
+  mac: BT_08:EB:ED:93:07:8C
+  name: SoundCore 2
+  picture:
+  track: false
+  vendor: World Elite Technology Co.,LTD
+
+ford_audio:
+  hide_if_away: false
+  icon:
+  mac: BT_00:26:7E:B9:FA:18
+  name: Ford Audio
+  picture:
+  track: false
+  vendor: PARROT SA
+
+soundbuds_slim:
+  hide_if_away: false
+  icon:
+  mac: BT_20:9B:A5:6F:08:E6
+  name: SoundBuds Slim
+  picture:
+  track: false
+  vendor: JIAXING GLEAD Electronics Co.,Ltd
+
+barlets_iphone_2:
+  hide_if_away: false
+  icon:
+  mac: BT_20:EE:28:D6:28:DC
+  name: Barlet’s iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+desktop45rbgp6connect:
+  hide_if_away: false
+  icon:
+  mac: 74:E6:E2:13:74:77
+  name: DESKTOP-45RBGP6.connect
+  picture:
+  track: false
   vendor: unknown
+
+
+
+edsmacbookproconnect:
+  hide_if_away: false
+  icon:
+  mac: 78:4F:43:97:EB:B4
+  name: Eds-MacBook-Pro.connect
+  picture:
+  track: false
+  vendor: Apple, Inc
+
+
+haddensairconnect:
+  hide_if_away: false
+  icon:
+  mac: E0:AC:CB:89:96:02
+  name: Haddens-Air.connect
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+barletsiphoneconnect:
+  hide_if_away: false
+  icon:
+  mac: 20:EE:28:D6:28:DB
+  name: Barlets-iPhone.connect
+  picture:
+  track: false
+  vendor: unknown
+
+
+st1838:
+  hide_if_away: false
+  icon:
+  mac: BT_00:21:86:0B:00:03
+  name: ST1838
+  picture:
+  track: false
+  vendor: Universal Global Scientific Industrial Co., Ltd.
+
+hazes_iphone:
+  hide_if_away: false
+  icon:
+  mac: BT_6C:AB:31:06:A7:D0
+  name: haze’s iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+c300:
+  hide_if_away: false
+  icon:
+  mac: BT_90:CF:15:A2:FA:90
+  name: C3-00
+  picture:
+  track: false
+  vendor: unknown
+
+samsung_galaxy_s7_edge_2:
+  hide_if_away: false
+  icon:
+  mac: BT_F8:E6:1A:8B:63:EC
+  name: Samsung Galaxy S7 edge
+  picture:
+  track: false
+  vendor: unknown
+
+mi_phone:
+  hide_if_away: false
+  icon:
+  mac: BT_50:8F:4C:F1:CC:BF
+  name: Mi Phone
+  picture:
+  track: false
+  vendor: Xiaomi Communications Co Ltd
+
+anker_soundcore:
+  hide_if_away: false
+  icon:
+  mac: BT_A4:77:58:03:22:A3
+  name: Anker SoundCore
+  picture:
+  track: false
+  vendor: Ningbo Freewings Technologies Co.,Ltd
+
+oneplus_5tconnect:
+  hide_if_away: false
+  icon:
+  mac: A0:99:9B:19:0A:C9
+  name: OnePlus 5T.connect
+  picture:
+  track: false
+  vendor: unknown
+
+smeuk1709:
+  hide_if_away: false
+  icon:
+  mac: BT_64:80:99:B9:35:83
+  name: SME-UK1709
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+huawei_mate_10_pro:
+  hide_if_away: false
+  icon:
+  mac: BT_B0:E1:7E:0F:9A:5E
+  name: HUAWEI Mate 10 Pro
+  picture:
+  track: false
+  vendor: unknown
+
+plt_bbfit:
+  hide_if_away: false
+  icon:
+  mac: BT_E4:22:A5:9B:6E:7E
+  name: PLT BBFIT
+  picture:
+  track: false
+  vendor: PLANTRONICS, INC.
+
+huawei_mate_10_pro_2:
+  hide_if_away: false
+  icon:
+  mac: BT_74:D2:1D:0E:1C:2B
+  name: HUAWEI Mate 10 Pro
+  picture:
+  track: false
+  vendor: HUAWEI TECHNOLOGIES CO.,LTD

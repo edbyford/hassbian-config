@@ -51,6 +51,8 @@
     - apparent_temperature_min
     - precip_intensity_max
 
-- platform: time_date
-  display_options:
-    - 'time'
+- platform: template
+  sensors:
+    family_room:
+      value_template: '{{ states.remote.harmony_hub.attributes.current_activity }}'
+      friendly_name: 'Harmony Hub'
