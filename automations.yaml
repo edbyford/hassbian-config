@@ -40,9 +40,8 @@
       from: 'home'
       to: 'not_home'
   condition:
-    condition: state
-    entity_id: light.left_of_sofa
-    state: 'on'
+    condition: sun
+    after: sunset
   action:
       service: light.turn_on
       entity_id: light.left_of_screen, light.right_of_screen
@@ -252,10 +251,8 @@
   alias: Mark Everyone Away
   trigger:
     - platform: state
-      entity_id: group.222sw_presence
-      to: 'not_home'
-      for:
-        minutes: 10
+      entity_id: group.people_status
+      to: 'Away'
   action:
     - service: notify.simplepush
       data:
@@ -263,9 +260,7 @@
     - service: input_select.select_option
       data:
         entity_id: input_select.everyone_status_dropdown
-        option: Away    
-    - service: remote.turn_off
-      entity_id: remote.harmony_hub
+        option: Away
     - service: light.turn_off
 
 - id: MarkEveryoneExtendedAway
@@ -281,7 +276,6 @@
       data:
         entity_id: input_select.everyone_status_dropdown
         option: Extended Away
-
     - service: notify.simplepush
       data:
         message: "Flat is empty. Low power mode activated"

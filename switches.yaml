@@ -1,38 +1,25 @@
 ## switches
 
-  - platform: flux
-    lights:
-      - light.hall
-      - light.left_of_screen
-      - light.right_of_screen
-      - light.left_of_sofa
-      - light.right_of_sofa
-      - light.ed_bedside
-      - light.hadden_bedside
-      - light.barlet
-      # - light.tradfri_bulb_gu10_ws_400lm_3
-      # - light.tradfri_bulb_gu10_ws_400lm_4
-      # - light.tradfri_bulb_gu10_ws_400lm_2
-      # - light.tradfri_bulb_gu10_ws_400lm
+  platform: flux
+  lights:
+    - light.hall
+    - light.left_of_screen
+    - light.right_of_screen
+    - light.left_of_sofa
+    - light.right_of_sofa
+    - light.ed_bedside
+    - light.hadden_bedside
+    - light.barlet
+    # - light.tradfri_bulb_gu10_ws_400lm_3
+    # - light.tradfri_bulb_gu10_ws_400lm_4
+    # - light.tradfri_bulb_gu10_ws_400lm_2
+    # - light.tradfri_bulb_gu10_ws_400lm
 
-    name: Fluxer
-    # start_time: '7:00'
-    # stop_time: '23:00'
-    # start_colortemp: 4000
-    # sunset_colortemp: 3000
-    # stop_colortemp: 1900
-    brightness: 240
-    mode: xy
-
-  - platform: template
-    switches:
-      tv:
-        value_template: "{% if is_state('remote.harmony_hub', 'on') %}on{% else %}off{% endif %}"
-        turn_on:
-          service: remote.turn_on
-          entity_id: remote.harmony_hub
-          data:
-            activity: 23274548          
-        turn_off:
-          service: remote.turn_off
-          entity_id: remote.harmony_hub
+  name: Fluxer
+  # start_time: '7:00'
+  # stop_time: '23:00'
+  # start_colortemp: 4000
+  # sunset_colortemp: 3000
+  # stop_colortemp: 1900
+  brightness: 240
+  mode: xy
