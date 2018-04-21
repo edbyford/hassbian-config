@@ -7,5 +7,6 @@
 *.pyc
 !hadaemon/apps/*
 !hadaemon/appdaemon.yaml
+!appdaemon/*
 secrets.yaml
 
