@@ -9,7 +9,7 @@ appdaemon:
     HASS:
       type: hass
       ha_url: http://hassio/homeassistant
-      ha_key: !secret api_password
+      ha_key: d7a696741b4947d586d1ba5a8cce339a
       cert_verify: False
 hadashboard:
   dash_url: http://127.0.0.1:5050
