@@ -32,6 +32,7 @@ Living Room Lights:
     - light.right_of_sofa
     - light.left_of_screen
     - light.right_of_screen
+    - group.tradfri_lr
 
 Tradfri LR:
   name: Tradfri LR
